@@ -1,0 +1,91 @@
+﻿<Window x:Class="ListBoxWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListBoxWpf"
+        mc:Ignorable="d"
+        Title="ListBoxView" Height="400" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.76*"></RowDefinition>
+            <RowDefinition Height="0.12*"></RowDefinition>
+            <RowDefinition Height="0.12*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <ListBox
+            x:Name="my_listbox"
+            Grid.Row="0"
+            Grid.Column="0"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            Margin="8,8,8,0">            
+        </ListBox>
+
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label
+                Content="Элемент: "
+                Grid.Row="0"
+                Grid.Column="0"
+                Margin="8,0,0,0"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center">                
+            </Label>
+
+            <TextBox
+                x:Name="element_textbox"
+                Grid.Row="0"
+                Grid.Column="1"
+                Height="20"
+                HorizontalAlignment="Stretch"
+                Margin="4,0,8,0">                
+            </TextBox>
+        </Grid>
+
+        <Grid Grid.Row="2" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                <ColumnDefinition Width="0.5*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Button
+                x:Name="addElement_button"
+                Grid.Row="0"
+                Grid.Column="0"
+                Content="Add"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="8,0,4,8" 
+                Click="AddElement_button_Click">
+            </Button>
+
+            <Button
+                x:Name="removeElement_button"
+                Grid.Row="0"
+                Grid.Column="1"
+                Content="Remove"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="4,0,8,8" 
+                Click="RemoveElement_button_Click">               
+            </Button>
+        </Grid>
+        
+    </Grid>
+</Window>
