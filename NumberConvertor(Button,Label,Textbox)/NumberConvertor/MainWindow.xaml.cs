@@ -30,13 +30,14 @@ namespace NumberConvertor
 
         private void Result_button_Click(object sender, RoutedEventArgs e)
         {
+            
             if(number_textbox.Text != "")
             {
                 int number = Convert.ToInt32(number_textbox.Text);
                 for (var i = 1; i < 15; i++)
                 {
                     OtherNumber num = new OtherNumber(number,i+1);
-                    result_list.Add($"Число в {i+1}-системе: {num.GetValue()}");                    
+                    result_list.Add($"Число в {i+1}-системе: {num.GetValueOfNumber()}");                    
                 } 
             }
 

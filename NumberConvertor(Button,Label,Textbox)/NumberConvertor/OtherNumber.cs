@@ -19,7 +19,7 @@ namespace NumberConvertor
             this.isdecimal = number;
         }
 
-        public string GetValue()
+        public string GetValueOfNumber()
         {
             if (nondecimal != null)
             {
