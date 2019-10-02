@@ -14,7 +14,7 @@ namespace NumberConvertor
             return letters[input];
         }
 
-        internal static string fromDecimal(int number, int basis)
+        protected static string fromDecimal(int number, int basis)
         {
             
             string result = "";
