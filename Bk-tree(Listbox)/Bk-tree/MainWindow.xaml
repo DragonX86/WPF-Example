@@ -106,7 +106,7 @@
             Click="Search_button_Click">
         </Button>
         
-        <ListBox
+        <ListBox           
             x:Name="listword"
             Grid.Row="2" 
             Grid.ColumnSpan="2" 
