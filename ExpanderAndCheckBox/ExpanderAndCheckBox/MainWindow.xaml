@@ -1,0 +1,132 @@
+﻿<Window x:Class="ExpanderAndCheckBox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExpanderAndCheckBox"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.85*"></RowDefinition>
+            <RowDefinition Height="0.15*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <StackPanel Grid.Row="0" Grid.Column="0">            
+            <Expander Header="Технологии .new framework" IsExpanded="True" Margin="4">
+                <StackPanel>                    
+                    <TextBlock Margin="8">Отметьте, что вам больше нравится</TextBlock>                    
+                    <CheckBox
+                        x:Name="group1elem1_checkbox"
+                        x:Uid="1"
+                        Checked="Group1_checkbox_Checked"
+                        Unchecked="Group1_checkbox_Unchecked"
+                        Content="WinForms"
+                        Margin="3">                        
+                    </CheckBox>
+                    
+                    <CheckBox                        
+                        x:Name="group1elem2_checkbox"
+                        x:Uid="2"
+                        Checked="Group1_checkbox_Checked"
+                        Unchecked="Group1_checkbox_Unchecked"
+                        Content="WPF"
+                        Margin="3">                       
+                    </CheckBox>
+                    
+                    <CheckBox                        
+                        x:Name="group1elem3_checkbox"
+                        x:Uid="3"
+                        Checked="Group1_checkbox_Checked"
+                        Unchecked="Group1_checkbox_Unchecked"
+                        Content="ASP.NET"
+                        Margin="3">                        
+                    </CheckBox>
+
+                    <CheckBox
+                        x:Name="group1elem4_checkbox"
+                        x:Uid="4"
+                        Checked="Group1_checkbox_Checked"
+                        Unchecked="Group1_checkbox_Unchecked"
+                        Content="Entity Framework"
+                        Margin="3">
+                    </CheckBox>
+
+                    <CheckBox
+                        x:Name="group1elem5_checkbox"
+                        x:Uid="5"
+                        Checked="Group1_checkbox_Checked"
+                        Unchecked="Group1_checkbox_Unchecked"
+                        Content="ADO.NET"
+                        Margin="3">
+                    </CheckBox>
+                </StackPanel> 
+            </Expander>
+
+            <Expander Header="Языки программирования" IsExpanded="True" Margin="4">
+                <StackPanel>
+                    <TextBlock Margin="8">Отметьте, что вам больше нравится</TextBlock>
+                    <CheckBox
+                        x:Name="group2elem1_checkbox"
+                        x:Uid="1"
+                        Checked="Group2_checkbox_Checked"
+                        Unchecked="Group2_checkbox_Unchecked"
+                        Content="Java"
+                        Margin="3">
+                    </CheckBox>
+
+                    <CheckBox
+                        x:Name="group2elem2_checkbox"
+                        x:Uid="2"
+                        Checked="Group2_checkbox_Checked"
+                        Unchecked="Group2_checkbox_Unchecked"
+                        Content="C#"
+                        Margin="3">
+                    </CheckBox>
+
+                    <CheckBox
+                        x:Name="group2elem3_checkbox"
+                        x:Uid="3"
+                        Checked="Group2_checkbox_Checked"
+                        Unchecked="Group2_checkbox_Unchecked"
+                        Content="C++"
+                        Margin="3">
+                    </CheckBox>
+
+                    <CheckBox
+                        x:Name="group2elem4_checkbox"
+                        x:Uid="4"
+                        Checked="Group2_checkbox_Checked"
+                        Unchecked="Group2_checkbox_Unchecked"
+                        Content="JavaScript"
+                        Margin="3">
+                    </CheckBox>
+
+                    <CheckBox
+                        x:Name="group2elem5_checkbox"
+                        x:Uid="5"
+                        Checked="Group2_checkbox_Checked"
+                        Unchecked="Group2_checkbox_Unchecked"
+                        Content="GoLang"
+                        Margin="3">
+                    </CheckBox>
+                </StackPanel>
+            </Expander>            
+        </StackPanel>
+
+        <Button
+            x:Name="result_button"
+            x:Uid="button1"
+            Content="Получить информацию"
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="8,12,8,12"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            Click="Result_button_Click">
+        </Button>
+    </Grid>
+</Window>
